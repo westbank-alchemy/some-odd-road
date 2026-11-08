@@ -1,0 +1,21 @@
+---
+layout: default
+title: All Stories
+permalink: /stories/
+---
+<section class="inside-page">
+  <p class="eyebrow">THE COMPLETE ARCHIVE</p>
+  <h1 class="page-title">All stories</h1>
+  <p class="page-intro">Dispatches, detours, and observations from along the way.</p>
+  {% if site.posts.size > 0 %}
+  <div class="story-list archive-list">
+    {% for post in site.posts %}
+      <article class="story-list-item">
+        <div><p class="story-meta">{{ post.location | default: 'FROM THE ROAD' }} · {{ post.date | date: '%d %b %Y' }}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.summary | default: post.excerpt | strip_html | truncatewords: 29 }}</p></div><span class="item-index">{{ forloop.index | prepend: '0' }}</span>
+      </article>
+    {% endfor %}
+  </div>
+  {% else %}
+    <p class="empty-note">The archive is currently empty. Stories will appear here as they are published.</p>
+  {% endif %}
+</section>

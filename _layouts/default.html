@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eae5d8">
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <title>{% if page.title %}{{ page.title | escape }} — {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="page-shell">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="site-header">
+      <div class="double-rule" aria-hidden="true"></div>
+      <a class="masthead" href="{{ '/' | relative_url }}" aria-label="Some Odd Road homepage">
+        <span class="brand-left">Some</span>
+        <span class="seal seal-masthead" aria-hidden="true"><svg viewBox="0 0 70 70"><circle cx="35" cy="35" r="31"/><circle cx="35" cy="35" r="27" stroke-dasharray="1 2.8"/><path d="M36 12 C19 21 46 29 33 40 S42 51 33 60" /></svg></span>
+        <span class="brand-right">dd Road</span>
+      </a>
+      <p class="tagline">{{ site.description }}</p>
+      <div class="publication-line">
+        <span>EST. MMXXVI</span>
+        <span class="publication-center">AN INDEPENDENT TRAVEL JOURNAL</span>
+        <span>ISSUE NO. 001</span>
+      </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Front Page</a>
+        <a href="{{ '/stories/' | relative_url }}" {% if page.url == '/stories/' %}aria-current="page"{% endif %}>All Stories</a>
+        <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
+      </nav>
+    </header>
+    <main id="main">{{ content }}</main>
+    <footer class="site-footer">
+      <div class="footer-rule"></div>
+      <span>SOME ODD ROAD</span>
+      <span>SKETCHES FROM THE ROAD · EST. 2026</span>
+    </footer>
+  </div>
+</body>
+</html>

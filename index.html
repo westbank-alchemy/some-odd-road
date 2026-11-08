@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{% assign featured = site.posts.first %}
+<section class="front-page" aria-label="Featured story">
+  {% if featured and featured.cover %}
+    <a href="{{ featured.url | relative_url }}" class="feature-visual"><img src="{{ featured.cover | relative_url }}" alt="{{ featured.cover_alt | default: featured.title | escape }}"><span class="feature-stamp" aria-hidden="true">SOR<br>001</span></a>
+  {% elsif featured %}
+    <a href="{{ featured.url | relative_url }}" class="feature-visual"><img src="{{ '/assets/images/landscape-placeholder.svg' | relative_url }}" alt="Illustrated landscape placeholder"><span class="feature-stamp" aria-hidden="true">SOR<br>001</span></a>
+  {% else %}
+    <div class="feature-visual"><img src="{{ '/assets/images/landscape-placeholder.svg' | relative_url }}" alt="Illustrated mountain landscape, temporary cover art"><span class="feature-stamp" aria-hidden="true">SOR<br>001</span></div>
+  {% endif %}
+  <div class="feature-copy">
+    <p class="eyebrow">FIELD NOTES · SOME ODD ROAD</p>
+    {% if featured %}
+      <h1><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h1>
+      <p class="deck">{{ featured.summary | default: featured.excerpt | strip_html | truncatewords: 35 }}</p>
+      <a class="story-link" href="{{ featured.url | relative_url }}">Read the story <span aria-hidden="true">→</span></a>
+    {% else %}
+      <h1>Stories from the road.</h1>
+      <p class="deck">Travel essays at the intersection of place, history, culture, and the unexpected. The first dispatch is on its way.</p>
+      <a class="story-link" href="{{ '/about/' | relative_url }}">About the journal <span aria-hidden="true">→</span></a>
+    {% endif %}
+  </div>
+</section>
+<section class="latest-section" aria-label="Recent stories">
+  <div class="section-heading"><span>RECENT DISPATCHES</span><span>THE ARCHIVE</span></div>
+  {% if site.posts.size > 0 %}
+    <div class="story-list">
+      {% for post in site.posts limit: 4 %}
+      <article class="story-list-item">
+        <div><p class="story-meta">{{ post.location | default: 'FROM THE ROAD' }} · {{ post.date | date: '%d %b %Y' }}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.summary | default: post.excerpt | strip_html | truncatewords: 24 }}</p></div>
+        <span class="item-index">{{ forloop.index | prepend: '0' }}</span>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="view-all"><a href="{{ '/stories/' | relative_url }}">Explore all stories <span aria-hidden="true">→</span></a></p>
+  {% else %}
+    <p class="empty-note">This section will fill automatically as new stories are published.</p>
+  {% endif %}
+</section>

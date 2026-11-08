@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="inside-page article-page">
+  <p class="eyebrow">{{ page.location | default: 'FROM THE ROAD' }} · {{ page.date | date: '%d %B %Y' }}</p>
+  <h1 class="article-title">{{ page.title }}</h1>
+  {% if page.summary %}<p class="article-deck">{{ page.summary }}</p>{% endif %}
+  <div class="article-byline"><span>SOME ODD ROAD</span><span>{{ content | number_of_words }} WORDS</span></div>
+  {% if page.cover %}<figure class="article-cover"><img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title | escape }}">{% if page.caption %}<figcaption>{{ page.caption }}</figcaption>{% endif %}</figure>{% endif %}
+  <div class="article-body">{{ content }}</div>
+  <p class="back-to-archive"><a href="{{ '/stories/' | relative_url }}">← Back to all stories</a></p>
+</article>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="660" viewBox="0 0 1300 660" role="img" aria-label="Monochrome illustration of mountains above a lake">
+ <defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#78756f"/><stop offset=".67" stop-color="#c6c1b4"/><stop offset="1" stop-color="#aaa395"/></linearGradient>
+  <linearGradient id="water" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4b5453"/><stop offset="1" stop-color="#1f292a"/></linearGradient>
+  <linearGradient id="cliff" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#454845"/><stop offset="1" stop-color="#111b1d"/></linearGradient>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix in="n" type="saturate" values="0"/></filter>
+ </defs>
+ <rect width="1300" height="660" fill="url(#sky)"/>
+ <path d="M0 305 L90 240 155 290 260 130 350 215 435 96 510 180 592 59 666 177 738 122 811 225 885 90 977 203 1080 146 1178 259 1300 220 1300 475 0 475Z" fill="#535654"/>
+ <path d="M196 256 260 130 300 186 276 172 252 198Z M390 167 435 96 477 147 439 133 429 153Z M547 128 592 59 653 158 603 133 584 151Z M850 143 885 90 938 164 902 150Z" fill="#c7c4ba" opacity=".9"/>
+ <path d="M0 220 130 335 188 361 312 398 0 506Z" fill="url(#cliff)"/>
+ <path d="M1300 320 1205 347 1150 295 1108 360 1015 357 904 410 1300 475Z" fill="#1a2526"/>
+ <path d="M0 390 Q355 407 650 381 T1300 399 L1300 660 L0 660Z" fill="url(#water)"/>
+ <path d="M0 466 Q325 411 650 410 T1300 459 L1300 550 Q990 495 650 500 T0 538Z" fill="#697070" opacity=".3"/>
+ <path d="M0 480 L200 485 312 453 0 520Z M1300 495 L1098 456 946 477 1300 552Z" fill="#141d1f" opacity=".8"/>
+ <path d="M60 464q490 34 940-5 M290 536q340-25 775 12 M0 584q500-15 990 8" fill="none" stroke="#a0a09a" stroke-width="2" opacity=".16"/>
+ <rect width="1300" height="660" filter="url(#grain)" opacity=".10" style="mix-blend-mode:multiply"/>
+ <rect width="1300" height="660" fill="#101615" opacity=".20"/>
+</svg>

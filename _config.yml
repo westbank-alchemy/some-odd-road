@@ -1,0 +1,22 @@
+title: Some Odd Road
+description: "Sketches from where empires, trade, and memory overlap"
+# For a repository called some-odd-road, use /some-odd-road.
+# When you move to a custom domain, change baseurl to "".
+baseurl: "/some-odd-road"
+url: ""
+permalink: /stories/:title/
+markdown: kramdown
+future: false
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - preview
+  - build_sor.py
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
