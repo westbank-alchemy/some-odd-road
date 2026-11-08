@@ -1,7 +1,223 @@
-/* Some Odd Road starter. No external fonts, scripts, analytics, or image requests. */
-:root{--paper:#ece7dc;--ink:#181916;--muted:#68645c;--red:#a44237;--rule:#24231e;--line:#b7b0a2}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background-color:var(--paper);background-image:radial-gradient(rgba(115,104,82,.055) .65px,transparent .8px),linear-gradient(103deg,rgba(255,255,255,.22),transparent 48%,rgba(93,79,54,.035));background-size:5px 5px,100% 100%;font-family:Georgia,"Times New Roman",serif;line-height:1.58;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}a:hover{color:var(--red)}a:focus-visible{outline:2px solid var(--red);outline-offset:4px}img{max-width:100%;display:block}.page-shell{max-width:758px;margin:0 auto;padding:0 21px}.skip-link{position:absolute;top:-60px;background:#fff;padding:9px;z-index:3}.skip-link:focus{top:5px}.site-header{padding-top:48px}.double-rule{height:12px;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink)}.masthead{min-height:102px;display:flex;justify-content:center;align-items:center;gap:9px;white-space:nowrap;font-variant:small-caps;line-height:1;font-size:clamp(40px,6.9vw,72px);letter-spacing:-.025em;padding-top:15px}.brand-left,.brand-right{display:inline-block}.seal{flex:none;display:inline-flex;justify-content:center;align-items:center}.seal svg{width:100%;height:100%}.seal circle{fill:none;stroke:var(--red);stroke-width:1.8}.seal path{fill:none;stroke:var(--red);stroke-width:4.2;stroke-linecap:round}.seal-masthead{width:69px;height:69px;margin:0 -7px 0 1px;transform:rotate(-9deg)}.tagline{text-align:center;font-size:13px;font-style:italic;color:#7f5144;margin:0 0 22px}.publication-line{display:flex;align-items:center;justify-content:space-between;gap:7px;border-top:1px solid var(--ink);border-bottom:2px solid var(--ink);height:34px;font:700 10px/1.15 Georgia,serif;letter-spacing:.16em}.publication-center{color:var(--red);text-align:center}.site-nav{display:flex;justify-content:center;gap:39px;padding:17px 0 18px;font:700 10px/1.3 Georgia,serif;letter-spacing:.16em;text-transform:uppercase}.site-nav a[aria-current=page]{color:var(--red)}.front-page{padding-top:22px}.feature-visual{position:relative;display:block;overflow:hidden;aspect-ratio:2.04;background:#3b4340}.feature-visual img{width:100%;height:100%;object-fit:cover;filter:grayscale(.78) contrast(1.08)}.feature-stamp{position:absolute;top:28px;right:29px;width:87px;height:87px;display:grid;place-content:center;border:2px solid var(--red);outline:1px dotted var(--red);outline-offset:-7px;border-radius:50%;color:var(--red);font-size:18px;line-height:1.15;text-align:center;letter-spacing:.08em;font-weight:bold;transform:rotate(11deg);opacity:.85}.feature-copy{text-align:center;max-width:610px;margin:31px auto 54px}.eyebrow{color:var(--red);font-size:11px;letter-spacing:.18em;font-weight:700;line-height:1.5;text-transform:uppercase;margin:0 0 12px}.feature-copy h1{font-size:clamp(34px,5vw,48px);line-height:1.11;letter-spacing:-.028em;font-weight:normal;margin:0 auto 14px}.deck{font-style:italic;font-size:16px;color:#57534c;max-width:560px;line-height:1.65;margin:0 auto 15px}.story-link,.view-all{font-size:11px;font-weight:bold;letter-spacing:.13em;text-transform:uppercase}.story-link{border-bottom:1px solid var(--red);padding-bottom:5px}.latest-section{padding-bottom:65px}.section-heading{display:flex;justify-content:space-between;align-items:center;border-top:3px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px 0;font-size:10px;font-weight:bold;letter-spacing:.14em}.section-heading span:last-child{color:var(--red)}.story-list-item{display:flex;gap:35px;justify-content:space-between;padding:25px 0 24px;border-bottom:1px solid var(--line)}.story-list-item h2{font-weight:normal;line-height:1.23;font-size:27px;margin:7px 0}.story-list-item p:not(.story-meta){font-size:14px;color:#56534d;margin:0;max-width:560px}.story-meta{font:700 10px/1.4 Georgia,serif;letter-spacing:.13em;color:var(--red);text-transform:uppercase;margin:0}.item-index{font-size:27px;color:#ae5143;font-style:italic;opacity:.8}.view-all{text-align:right;margin-top:22px}.empty-note{font-size:15px;color:var(--muted);font-style:italic;margin:25px 0 0}.site-footer{padding:0 0 33px;font-size:10px;letter-spacing:.10em;display:flex;justify-content:space-between;gap:16px;color:var(--muted)}.footer-rule{display:none}.inside-page{padding:40px 0 90px}.page-title{font-size:clamp(43px,6vw,66px);font-weight:normal;line-height:1.08;letter-spacing:-.025em;margin:0 0 16px}.page-intro,.article-deck{font-style:italic;font-size:20px;line-height:1.57;color:#62584e;max-width:640px;margin:0 0 31px}.archive-list{border-top:3px solid var(--ink);margin-top:38px}.article-title{font-size:clamp(42px,6.5vw,68px);font-weight:normal;line-height:1.06;margin:0 0 20px;letter-spacing:-.02em}.article-byline{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--ink);border-bottom:2px solid var(--ink);padding:10px 0;margin:27px 0;font-size:10px;font-weight:bold;letter-spacing:.14em}.article-cover{margin:0 0 31px}.article-cover img{width:100%}.article-cover figcaption{font-size:12px;color:var(--muted);font-style:italic;margin-top:8px}.article-body{max-width:640px;margin:0 auto;font-size:18px;line-height:1.84}.article-body p{margin:0 0 1.25em}.article-body h2,.article-body h3{font-size:27px;font-weight:normal;line-height:1.25;margin:1.8em 0 .6em}.article-body a{color:var(--red);text-decoration:underline;text-underline-offset:3px}.article-body blockquote{padding-left:21px;border-left:2px solid var(--red);color:#5d564d;font-style:italic;margin:1.5em 0}.article-body img{margin:25px auto}.back-to-archive{margin-top:55px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.07em;text-transform:uppercase}.about-page .article-body{max-width:640px;margin-left:0}
-@media(max-width:640px){.page-shell{padding:0 16px}.site-header{padding-top:22px}.double-rule{height:9px}.masthead{min-height:80px;font-size:clamp(28px,7vw,45px);gap:3px;letter-spacing:-.045em;padding-top:8px}.seal-masthead{width:48px;height:48px;margin:0 -5px}.tagline{font-size:11px;line-height:1.4;margin:0 auto 17px;max-width:340px}.publication-line{height:29px;letter-spacing:.09em;font-size:8px}.publication-center{display:none}.site-nav{gap:23px;padding:14px 0;font-size:10px}.front-page{padding-top:12px}.feature-visual{aspect-ratio:1.43}.feature-stamp{width:60px;height:60px;font-size:13px;top:14px;right:16px}.feature-copy{margin:24px auto 42px}.feature-copy h1{font-size:37px}.deck{font-size:15px}.inside-page{padding:27px 0 60px}.article-body{font-size:17px}.site-footer{font-size:9px;line-height:1.5}.story-list-item h2{font-size:24px}}
-@media(max-width:375px){.masthead{font-size:27px}.seal-masthead{width:42px;height:42px}.publication-line{font-size:7px}.site-nav{gap:15px;font-size:9px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* Some Odd Road — editorial design pass 01.
+   All assets local, no third-party fonts or analytics.
+   Changes are visual only; posts, links, and Jekyll publishing are unchanged. */
+:root {
+  --paper: #ece6d8;
+  --ink: #181714;
+  --muted: #625a50;
+  --red: #9d3a2e;
+  --red-faded: #ac695b;
+  --line: #a9a091;
+  --rule: #29241d;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(circle, rgba(83, 69, 46, .075) .42px, transparent .82px),
+    linear-gradient(110deg, rgba(255,255,255,.18), transparent 46%, rgba(87,70,45,.035));
+  background-size: 5px 5px, 100% 100%;
+  font-family: Georgia, 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--red); }
+a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+img { max-width: 100%; display: block; }
+
+/* Narrow, centered newspaper sheet. */
+.page-shell { width: min(100% - 40px, 704px); margin: 0 auto; }
+.skip-link { position: absolute; top: -100px; z-index: 9; background: #fff; padding: 10px 14px; }
+.skip-link:focus { top: 8px; }
+.site-header { padding-top: 69px; }
+.double-rule { height: 13px; border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); }
+
+/* Masthead. The circular roadmark occupies the first O of 'Odd'. */
+.masthead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  min-height: 105px;
+  padding: 15px 0 0;
+  gap: 8px;
+  font-size: clamp(39px, 6.6vw, 68px);
+  line-height: 1;
+  font-variant: small-caps;
+  letter-spacing: -.02em;
+}
+.brand-left, .brand-right { display: inline-block; }
+.seal { flex: none; display: inline-flex; align-items: center; justify-content: center; }
+.seal svg { width: 100%; height: 100%; }
+.seal circle { fill: none; stroke: var(--red); stroke-width: 1.6; }
+.seal path { fill: none; stroke: var(--red); stroke-width: 4; stroke-linecap: round; }
+.seal-masthead { width: 69px; height: 69px; margin: 0 -7px 0 1px; transform: rotate(-9deg); }
+.tagline {
+  text-align: center;
+  color: #865046;
+  font-size: 12px;
+  line-height: 1.45;
+  font-style: italic;
+  letter-spacing: .007em;
+  margin: 0 0 20px;
+}
+
+/* Publication folio and unobtrusive navigation. */
+.publication-line {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid var(--rule);
+  border-bottom: 2px solid var(--rule);
+  font: 700 10px/1.15 Georgia, serif;
+  letter-spacing: .14em;
+}
+.publication-center { color: var(--red); text-align: center; }
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  padding: 15px 0 6px;
+  font: 700 10px/1.2 Georgia,serif;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.site-nav a { padding: 6px 0; }
+.site-nav a[aria-current="page"] { color: var(--red); }
+
+/* The lead photograph is the anchor of the front page. */
+.front-page { padding-top: 45px; }
+.feature-visual {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 1.91;
+  background: #353c3a;
+}
+.feature-visual img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(.70) contrast(1.09) brightness(.90);
+}
+.feature-stamp {
+  position: absolute;
+  top: 29px; right: 31px;
+  display: grid; place-content: center;
+  width: 93px; height: 93px;
+  border: 2px solid var(--red);
+  outline: 1px dashed rgba(157, 58, 46, .9);
+  outline-offset: -8px;
+  border-radius: 50%;
+  color: var(--red);
+  font-size: 18px; font-weight: bold;
+  line-height: 1.17; letter-spacing: .1em;
+  text-align: center;
+  opacity: .84;
+  transform: rotate(10deg);
+}
+.feature-copy { max-width: 590px; margin: 31px auto 55px; text-align: center; }
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--red);
+  font-size: 11px; font-weight: 700;
+  line-height: 1.55; letter-spacing: .175em;
+  text-transform: uppercase;
+}
+.feature-copy h1 {
+  margin: 0 auto 17px;
+  font-size: clamp(37px, 5vw, 50px);
+  font-weight: normal; letter-spacing: -.035em; line-height: 1.11;
+}
+.deck {
+  max-width: 535px; margin: 0 auto 19px;
+  color: #5c534b; font-style: italic;
+  font-size: 16px; line-height: 1.72;
+}
+.story-link, .view-all { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.story-link { padding: 0 0 5px; border-bottom: 1px solid var(--red); }
+
+/* The story index uses a newspaper section divider. */
+.latest-section { padding-bottom: 76px; }
+.section-heading {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 3px solid var(--rule); border-bottom: 1px solid var(--rule);
+  padding: 9px 0 10px;
+  font-size: 10px; font-weight: 700; letter-spacing: .14em;
+}
+.section-heading span:last-child { color: var(--red); }
+.story-list-item {
+  display: flex; justify-content: space-between; gap: 30px;
+  padding: 27px 0 26px; border-bottom: 1px solid var(--line);
+}
+.story-list-item h2 { font-size: 28px; font-weight: normal; line-height: 1.25; letter-spacing: -.012em; margin: 8px 0; }
+.story-list-item p:not(.story-meta) { max-width: 555px; margin: 0; font-size: 14px; line-height: 1.6; color: #60574d; }
+.story-meta { margin: 0; color: var(--red); font: 700 10px/1.4 Georgia, serif; letter-spacing: .14em; text-transform: uppercase; }
+.item-index { flex: none; color: var(--red-faded); opacity: .75; font-size: 26px; font-style: italic; }
+.view-all { margin-top: 23px; text-align: right; }
+.empty-note { color: var(--muted); font-size: 15px; font-style: italic; margin: 26px 0 0; }
+
+/* Archive and full-length articles. */
+.inside-page { padding: 52px 0 94px; }
+.page-title, .article-title { font-weight: normal; letter-spacing: -.026em; line-height: 1.08; }
+.page-title { margin: 0 0 18px; font-size: clamp(43px, 6vw, 66px); }
+.page-intro, .article-deck {
+  max-width: 620px; margin: 0 0 32px;
+  font-size: 20px; line-height: 1.6; font-style: italic; color: #63584d;
+}
+.archive-list { margin-top: 40px; border-top: 3px solid var(--rule); }
+.article-title { margin: 0 0 21px; font-size: clamp(42px, 6.5vw, 66px); }
+.article-byline {
+  display: flex; justify-content: space-between; gap: 14px;
+  padding: 10px 0 11px; margin: 29px 0 32px;
+  border-top: 1px solid var(--rule); border-bottom: 2px solid var(--rule);
+  font-size: 10px; font-weight: bold; line-height: 1.35; letter-spacing: .14em;
+}
+.article-cover { margin: 0 0 34px; }
+.article-cover img { width: 100%; }
+.article-cover figcaption { font-size: 12px; font-style: italic; color: var(--muted); margin-top: 9px; }
+.article-body { max-width: 626px; margin: 0 auto; font-size: 18px; line-height: 1.87; }
+.article-body p { margin: 0 0 1.28em; }
+.article-body h2, .article-body h3 { font-weight: normal; font-size: 27px; line-height: 1.3; margin: 1.8em 0 .6em; }
+.article-body a { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
+.article-body blockquote { margin: 1.5em 0; padding-left: 21px; border-left: 2px solid var(--red); color: #5b534a; font-style: italic; }
+.article-body img { margin: 27px auto; }
+.back-to-archive { margin-top: 57px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; letter-spacing: .075em; text-transform: uppercase; }
+.about-page .article-body { margin-left: 0; }
+.site-footer { padding: 0 0 34px; display: flex; justify-content: space-between; gap: 12px; color: #71685d; font-size: 10px; letter-spacing: .12em; }
+.footer-rule { display: none; }
+
+@media (max-width: 640px) {
+  .page-shell { width: min(100% - 30px, 704px); }
+  .site-header { padding-top: 27px; }
+  .double-rule { height: 10px; }
+  .masthead { min-height: 79px; padding-top: 9px; gap: 2px; font-size: clamp(27px, 7.1vw, 45px); letter-spacing: -.042em; }
+  .seal-masthead { width: 48px; height: 48px; margin: 0 -5px 0 0; }
+  .tagline { max-width: 350px; margin: 0 auto 18px; font-size: 11px; }
+  .publication-line { font-size: 8px; letter-spacing: .07em; height: 30px; }
+  .publication-center { display: none; }
+  .site-nav { gap: 23px; padding: 13px 0 5px; font-size: 10px; }
+  .front-page { padding-top: 24px; }
+  .feature-visual { aspect-ratio: 1.3; }
+  .feature-stamp { top: 16px; right: 17px; width: 65px; height: 65px; font-size: 13px; }
+  .feature-copy { margin: 27px auto 43px; }
+  .feature-copy h1 { font-size: 38px; }
+  .deck { font-size: 15px; }
+  .inside-page { padding: 35px 0 63px; }
+  .article-body { font-size: 17px; line-height: 1.8; }
+  .article-byline { letter-spacing: .06em; }
+  .story-list-item h2 { font-size: 24px; }
+  .site-footer { font-size: 9px; line-height: 1.5; }
+}
+@media (max-width: 375px) {
+  .masthead { font-size: 26px; }
+  .seal-masthead { width: 41px; height: 41px; }
+  .site-nav { gap: 17px; font-size: 9px; }
+  .publication-line { font-size: 7px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
