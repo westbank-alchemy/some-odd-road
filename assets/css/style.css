@@ -221,3 +221,13 @@ img { max-width: 100%; display: block; }
   .publication-line { font-size: 7px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+ background-color: #ece6d8;
+ background-image;
+}
+
+body {
+ background-color: #ece6d8;
+ background-image: none;
+}
