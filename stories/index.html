@@ -3,19 +3,24 @@ layout: default
 title: All Stories
 permalink: /stories/
 ---
-<section class="inside-page">
-  <p class="eyebrow">THE COMPLETE ARCHIVE</p>
-  <h1 class="page-title">All stories</h1>
-  <p class="page-intro">Dispatches, detours, and observations from along the way.</p>
-  {% if site.posts.size > 0 %}
-  <div class="story-list archive-list">
+<section class="ledger" id="ledger">
+  <div class="ledger-head"><span class="t">The Ledger</span><span>All dispatches</span></div>
+  <div class="ledger-sub">Unedited. Unranked. In the order they came off the road.</div>
+  <table class="ledger-table">
+    <thead><tr><th style="width:78px">Stamp</th><th style="width:110px">Filed</th><th style="width:200px">Dateline</th><th>Title</th><th style="width:80px">Ext.</th><th style="width:90px">Read</th></tr></thead>
+    <tbody>
     {% for post in site.posts %}
-      <article class="story-list-item">
-        <div><p class="story-meta">{{ post.location | default: 'FROM THE ROAD' }} · {{ post.date | date: '%d %b %Y' }}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.summary | default: post.excerpt | strip_html | truncatewords: 29 }}</p></div><span class="item-index">{{ forloop.index | prepend: '0' }}</span>
-      </article>
+      <tr class="rv">
+        <td><span class="lx-stamp"><svg aria-hidden="true" class="stamp-svg" viewBox="0 0 200 200"><g class="ink-grp"><circle class="ring ring-outer" cx="100" cy="100" r="90"/><circle class="ring ring-inner" cx="100" cy="100" r="78"/><text x="100" y="76" text-anchor="middle" font-size="22" letter-spacing="3">N°</text><text x="100" y="142" text-anchor="middle" font-size="52" letter-spacing="2">{{ forloop.index | prepend: '0' }}</text></g></svg></span><span class="lx-no">N° {{ forloop.index | prepend: '0' }}</span></td>
+        <td><span class="lx-date">{{ post.date | date: '%d %b %Y' }}</span></td>
+        <td><span class="lx-loc">{{ post.location | default: 'From the road' }}</span></td>
+        <td><a class="sor-ledger-link" href="{{ post.url | relative_url }}"><span class="lx-title">{{ post.title }}</span><span class="lx-blurb">{{ post.summary | default: post.excerpt | strip_html | truncatewords: 28 }}</span></a></td>
+        <td><span class="lx-ext">{{ post.content | number_of_words }}</span></td>
+        <td><a class="lx-read" href="{{ post.url | relative_url }}">Read →</a></td>
+      </tr>
     {% endfor %}
-  </div>
-  {% else %}
-    <p class="empty-note">The archive is currently empty. Stories will appear here as they are published.</p>
-  {% endif %}
+    </tbody>
+  </table>
+  {% if site.posts.size == 0 %}<p class="sor-empty">No dispatches have been filed yet.</p>{% endif %}
+  <nav class="sor-links"><a href="{{ '/' | relative_url }}">← Front page</a></nav>
 </section>

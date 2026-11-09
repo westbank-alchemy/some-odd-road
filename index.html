@@ -1,41 +1,221 @@
 ---
 layout: default
 ---
-{% assign featured = site.posts.first %}
-<section class="front-page" aria-label="Featured story">
-  {% if featured and featured.cover %}
-    <a href="{{ featured.url | relative_url }}" class="feature-visual"><img src="{{ featured.cover | relative_url }}" alt="{{ featured.cover_alt | default: featured.title | escape }}"><span class="feature-stamp" aria-hidden="true">SOR<br>001</span></a>
-  {% elsif featured %}
-    <a href="{{ featured.url | relative_url }}" class="feature-visual"><img src="{{ '/assets/images/landscape-placeholder.svg' | relative_url }}" alt="Illustrated landscape placeholder"><span class="feature-stamp" aria-hidden="true">SOR<br>001</span></a>
-  {% else %}
-    <div class="feature-visual"><img src="{{ '/assets/images/landscape-placeholder.svg' | relative_url }}" alt="Illustrated mountain landscape, temporary cover art"><span class="feature-stamp" aria-hidden="true">SOR<br>001</span></div>
-  {% endif %}
-  <div class="feature-copy">
-    <p class="eyebrow">FIELD NOTES · SOME ODD ROAD</p>
-    {% if featured %}
-      <h1><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h1>
-      <p class="deck">{{ featured.summary | default: featured.excerpt | strip_html | truncatewords: 35 }}</p>
-      <a class="story-link" href="{{ featured.url | relative_url }}">Read the story <span aria-hidden="true">→</span></a>
-    {% else %}
-      <h1>Stories from the road.</h1>
-      <p class="deck">Travel essays at the intersection of place, history, culture, and the unexpected. The first dispatch is on its way.</p>
-      <a class="story-link" href="{{ '/about/' | relative_url }}">About the journal <span aria-hidden="true">→</span></a>
-    {% endif %}
+{% assign featured = site.posts | where: "featured", true | first %}
+{% if featured %}
+<section class="hero" id="dispatch">
+  <div class="hero-frame rv on" id="heroFrame">
+    <a href="{{ featured.url | relative_url }}" aria-label="Read {{ featured.title | escape }}">
+      <img src="{{ featured.cover | default: '/assets/images/v61-mestia.jpg' | relative_url }}" alt="{{ featured.cover_alt | default: featured.title | escape }}">
+    </a>
   </div>
+  {% if featured.caption %}<div class="hero-cap">{{ featured.caption }}</div>{% endif %}
 </section>
-<section class="latest-section" aria-label="Recent stories">
-  <div class="section-heading"><span>RECENT DISPATCHES</span><span>THE ARCHIVE</span></div>
-  {% if site.posts.size > 0 %}
-    <div class="story-list">
-      {% for post in site.posts limit: 4 %}
-      <article class="story-list-item">
-        <div><p class="story-meta">{{ post.location | default: 'FROM THE ROAD' }} · {{ post.date | date: '%d %b %Y' }}</p><h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2><p>{{ post.summary | default: post.excerpt | strip_html | truncatewords: 24 }}</p></div>
-        <span class="item-index">{{ forloop.index | prepend: '0' }}</span>
-      </article>
-      {% endfor %}
-    </div>
-    <p class="view-all"><a href="{{ '/stories/' | relative_url }}">Explore all stories <span aria-hidden="true">→</span></a></p>
-  {% else %}
-    <p class="empty-note">This section will fill automatically as new stories are published.</p>
-  {% endif %}
-</section>
+{% if featured.lead_quote %}<section class="cold-open"><q id="typewriter" data-text="{{ featured.lead_quote | escape }}"></q></section>{% endif %}
+<article class="article">
+  <div class="measure">
+    <div class="eyebrow rv">The Dispatch</div>
+    <h2 class="title rv"><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
+    {% if featured.summary %}<p class="standfirst rv">{{ featured.summary }}</p>{% endif %}
+    <div class="byline rv"><span>Some Odd Road</span><span class="sep"></span><span>{{ featured.location | default: 'Filed from the road' }}</span><span class="sep"></span><span>{{ featured.content | number_of_words }} words</span></div>
+    <div class="prose journal-prose">{{ featured.content }}</div>
+    <div class="end-stamp rv"><span>End of dispatch</span><em>·</em><span>{{ featured.content | number_of_words }} words</span><em>·</em><span>Filed by hand</span></div>
+    <nav class="sor-links" aria-label="Story navigation"><a href="{{ featured.url | relative_url }}">Story permalink</a><a href="{{ '/stories/' | relative_url }}">The ledger</a></nav>
+  </div>
+</article>
+{% else %}
+    <!-- HERO -->
+    <section class="hero" id="dispatch">
+        <div class="hero-frame rv on" id="heroFrame">
+            <img src="{{ '/assets/images/v61-mestia.jpg' | relative_url }}" alt="Mountain road through misty Svaneti valley">
+            <svg class="stamp-svg stamp-hero" viewBox="0 0 200 200" aria-hidden="true">
+                <g class="ink-grp">
+                    <circle class="ring ring-outer" cx="100" cy="100" r="90"></circle>
+                    <circle class="ring ring-inner" cx="100" cy="100" r="78"></circle>
+                    <text font-size="14" letter-spacing="4.5">
+                        <textpath href="#arc-top" startOffset="6%">FIELD NOTE · FIELD NOTE</textpath>
+                    </text>
+                    <text font-size="10" letter-spacing="3.5">
+                        <textpath href="#arc-bot" startOffset="4%">FILED BY HAND · MMXXVI</textpath>
+                    </text>
+                    <text x="100" y="113" text-anchor="middle" font-size="42" letter-spacing="1">042</text>
+                </g>
+            </svg>
+        </div>
+        <div class="hero-cap">Fig. 01 — The road into Upper Svaneti, before the fog lifted.</div>
+    </section>
+
+    <!-- COLD OPEN — typewriter lead -->
+    <section class="cold-open">
+        <q id="typewriter"></q>
+    </section>
+
+    <!-- ARTICLE -->
+    <article class="article">
+        <div class="measure">
+            <div class="eyebrow rv">The Dispatch</div>
+            <h2 class="title rv">The Georgian Highway</h2>
+            <p class="standfirst rv">Fog for breakfast. Stone towers built for siege. A mechanic who pours you coffee and calls it charity.</p>
+            <div class="byline rv">
+                <span>By the Editor</span><span class="sep"></span>
+                <span>Filed from Mestia</span><span class="sep"></span>
+                <span>Six minute read</span>
+            </div>
+
+            <div class="prose">
+                <p class="lede rv"><span class="loc">Mestia, Georgia</span>The air tasted of rusted iron and old snow. We crossed the valley before dawn. The headlights punched holes in the fog. The fog did not move. It resented us.</p>
+
+                <p class="rv">You do not end up in Svaneti by accident. You end up here because you made a sequence of poor decisions and committed to them. That is the whole trick, in travel and most other things.</p>
+
+                <div class="section-break rv"><span>On Architecture</span></div>
+
+                <p class="rv">The towers are the tell. Stone. Squat. Built to absorb arrows and opinions. Svaneti assumes history repeats. It assumes the next repetition involves your house. The assumption has been correct often enough to pay for itself.</p>
+
+                <p class="rv">A man in Ushguli once told me his great-grandfather had bricked up a window in 1922 and nobody had reopened it. I asked why. He looked at me the way you look at a child who has asked why the sky is blue. "Because," he said, "nobody has needed to."</p>
+
+                <div class="pullquote rv">
+                    Here you pay for the logistics. Flour up a mountain. Not the butter.
+                    <span class="attr">A shepherd, near Adishi</span>
+                </div>
+
+                <p class="rv">A black coffee is free if you know the mechanic. About twelve lari if you don't. The croissant is a separate problem.</p>
+
+                <div class="price rv">
+                    <span class="price-label">Local Price Index</span>
+                    <span class="price-body"><strong>Coffee &amp; croissant</strong> — Mestia, Upper Svaneti</span>
+                    <span class="price-val">12 GEL · $4.50</span>
+                </div>
+
+                <div class="section-break rv"><span>On Roads</span></div>
+
+                <p class="rv">The road worsened, the way roads do past a certain altitude. Concrete. Then gravel. Then theory. The rental agreement had assumed pavement. The rental agreement had been unread.</p>
+
+                <p class="rv">A cow stood in the middle of the track for a long time. We sat in the car and watched it. It watched us back. Nobody spoke. After a while it walked off. There was no larger lesson.</p>
+
+                <p class="rv">The map shows a track. Locals say it washed out in October. My last visit was 2018. The roads are a fraction better. The isolation is absolute. Cell service is a rumour. Wi-Fi is a philosophical concept. The only reliable signal is the one the mountains send every evening, when the clouds descend and the temperature drops twenty degrees in an hour: go inside, or become the story.</p>
+
+                <p class="rv">I went inside.</p>
+            </div>
+
+            <div class="end-stamp rv">
+                <span>End of dispatch</span>
+                <em>·</em>
+                <span>1,340 words</span>
+                <em>·</em>
+                <span>Filed by hand</span>
+            </div>
+        </div>
+    </article>
+
+
+{% endif %}
+    <!-- ============ LEDGER (table, stamp glyph in column 1) ============ -->
+    <section class="ledger" id="ledger">
+        <div class="ledger-head">
+            <span class="t">The Ledger</span>
+            <span>Earlier dispatches</span>
+        </div>
+        <div class="ledger-sub">Dispatches filed from the road. Earlier entries shown in the original mockup are demonstration content until real stories are added.</div>
+
+        <table class="ledger-table">
+            <thead>
+                <tr>
+                    <th style="width:78px">Stamp</th>
+                    <th style="width:110px">Filed</th>
+                    <th style="width:200px">Dateline</th>
+                    <th>Title</th>
+                    <th style="width:80px">Ext.</th>
+                    <th style="width:90px">Read</th>
+                </tr>
+            </thead>
+            <tbody>
+{% if site.posts.size > 0 %}
+  {% for post in site.posts %}
+  <tr class="rv">
+    <td>
+      <span class="lx-stamp"><svg aria-hidden="true" class="stamp-svg" viewBox="0 0 200 200"><g class="ink-grp"><circle class="ring ring-outer" cx="100" cy="100" r="90"/><circle class="ring ring-inner" cx="100" cy="100" r="78"/><text x="100" y="76" text-anchor="middle" font-size="22" letter-spacing="3">N°</text><text x="100" y="142" text-anchor="middle" font-size="52" letter-spacing="2">{{ forloop.index | prepend: '0' }}</text></g></svg></span>
+      <span class="lx-no">N° {{ forloop.index | prepend: '0' }}</span>
+    </td>
+    <td><span class="lx-date">{{ post.date | date: '%d %b %Y' }}</span></td>
+    <td><span class="lx-loc">{{ post.location | default: 'From the road' }}</span></td>
+    <td><a class="sor-ledger-link" href="{{ post.url | relative_url }}"><span class="lx-title">{{ post.title }}</span><span class="lx-blurb">{{ post.summary | default: post.excerpt | strip_html | truncatewords: 28 }}</span></a></td>
+    <td><span class="lx-ext">{{ post.content | number_of_words }}</span></td>
+    <td><a class="lx-read" href="{{ post.url | relative_url }}">Read →</a></td>
+  </tr>
+  {% endfor %}
+{% else %}
+
+                <tr class="rv">
+                    <td>
+                        <span class="lx-stamp">
+                            <svg class="stamp-svg" viewBox="0 0 200 200" aria-hidden="true">
+                                <g class="ink-grp">
+                                    <circle class="ring ring-outer" cx="100" cy="100" r="90"></circle>
+                                    <circle class="ring ring-inner" cx="100" cy="100" r="78"></circle>
+                                    <text x="100" y="76" text-anchor="middle" font-size="22" letter-spacing="3">N°</text>
+                                    <text x="100" y="142" text-anchor="middle" font-size="62" letter-spacing="2">041</text>
+                                </g>
+                            </svg>
+                        </span>
+                        <span class="lx-no">N° 041</span>
+                    </td>
+                    <td><span class="lx-date">15 IV MMXXVI</span></td>
+                    <td><span class="lx-loc">Fez Medina, Morocco</span></td>
+                    <td>
+                        <div class="lx-title">Nine Thousand Alleys</div>
+                        <div class="lx-blurb">The medina does not have streets. It has intentions. Each passage narrows by degrees until you are turning sideways past a donkey carrying propane.</div>
+                    </td>
+                    <td><span class="lx-ext">1,210</span></td>
+                    <td><span class="lx-read">Read →</span></td>
+                </tr>
+                <tr class="rv">
+                    <td>
+                        <span class="lx-stamp">
+                            <svg class="stamp-svg" viewBox="0 0 200 200" aria-hidden="true">
+                                <g class="ink-grp">
+                                    <circle class="ring ring-outer" cx="100" cy="100" r="90"></circle>
+                                    <circle class="ring ring-inner" cx="100" cy="100" r="78"></circle>
+                                    <text x="100" y="76" text-anchor="middle" font-size="22" letter-spacing="3">N°</text>
+                                    <text x="100" y="142" text-anchor="middle" font-size="62" letter-spacing="2">040</text>
+                                </g>
+                            </svg>
+                        </span>
+                        <span class="lx-no">N° 040</span>
+                    </td>
+                    <td><span class="lx-date">08 IV MMXXVI</span></td>
+                    <td><span class="lx-loc">Ruta 40, Patagonia</span></td>
+                    <td>
+                        <div class="lx-title">The Wind Tax</div>
+                        <div class="lx-blurb">Nobody tells you about the wind. Not the guidebook. Not the Argentine at the petrol station who sold you the last empanada. The wind is not weather. It is infrastructure.</div>
+                    </td>
+                    <td><span class="lx-ext">1,480</span></td>
+                    <td><span class="lx-read">Read →</span></td>
+                </tr>
+                <tr class="rv">
+                    <td>
+                        <span class="lx-stamp">
+                            <svg class="stamp-svg" viewBox="0 0 200 200" aria-hidden="true">
+                                <g class="ink-grp">
+                                    <circle class="ring ring-outer" cx="100" cy="100" r="90"></circle>
+                                    <circle class="ring ring-inner" cx="100" cy="100" r="78"></circle>
+                                    <text x="100" y="76" text-anchor="middle" font-size="22" letter-spacing="3">N°</text>
+                                    <text x="100" y="142" text-anchor="middle" font-size="62" letter-spacing="2">039</text>
+                                </g>
+                            </svg>
+                        </span>
+                        <span class="lx-no">N° 039</span>
+                    </td>
+                    <td><span class="lx-date">01 IV MMXXVI</span></td>
+                    <td><span class="lx-loc">Luang Prabang, Laos</span></td>
+                    <td>
+                        <div class="lx-title">The Alms Economy</div>
+                        <div class="lx-blurb">At 5.30 a.m. the monks file out in a line of saffron. The tourists crouch with their cameras. The locals kneel with their rice. The distinction tells you everything.</div>
+                    </td>
+                    <td><span class="lx-ext">1,105</span></td>
+                    <td><span class="lx-read">Read →</span></td>
+                </tr>
+            
+{% endif %}
+</tbody>
+        </table>
+    </section>

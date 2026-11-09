@@ -1,0 +1,19 @@
+/* Additional rules for the working site. The v6.1 rules remain untouched. */
+.sor-footer{max-width:980px;margin:0 auto;padding:1.2rem 2.5rem 2rem;display:flex;justify-content:center;gap:2.2rem;flex-wrap:wrap;font-family:var(--stamp);color:var(--ash);font-size:.68rem;letter-spacing:2px;text-transform:uppercase}
+.sor-footer a:hover,.sor-footer a:focus-visible,.sor-links a:hover,.sor-links a:focus-visible{color:var(--blood)}
+.sor-links{font-family:var(--stamp);font-size:.66rem;letter-spacing:2px;text-transform:uppercase;display:flex;gap:1.3rem;justify-content:center;margin:1.3rem 0 0}
+.sor-ledger-link{color:inherit;display:block}
+.sor-ledger-link:hover{color:var(--blood)}
+.ledger-table tbody tr{cursor:default}
+.ledger-table tbody tr:has(a){cursor:pointer}
+.prose.journal-prose{max-width:100%}
+.prose.journal-prose p,.prose.journal-prose ul,.prose.journal-prose ol{margin:0 0 1.55rem;font-size:1.13rem;line-height:1.88}
+.prose.journal-prose h2,.prose.journal-prose h3{font-family:var(--serif);font-weight:500;margin:2rem 0 1rem;line-height:1.25}
+.prose.journal-prose h2{font-size:1.7rem}.prose.journal-prose h3{font-size:1.35rem}
+.prose.journal-prose a{color:var(--blood);text-decoration:underline;text-underline-offset:3px}
+.prose.journal-prose blockquote{border-left:3px solid var(--blood);padding-left:1.4rem;font-size:1.3rem;font-style:italic}
+.prose.journal-prose img{max-width:100%;height:auto;margin:1.9rem auto}
+.prose.journal-prose ul,.prose.journal-prose ol{padding-left:1.5rem}
+.sor-notice{min-height:1rem;margin-top:.6rem;color:var(--bone);font-family:var(--stamp);font-size:.68rem}
+.sor-empty{font-family:var(--serif);text-align:center;color:var(--ash);font-style:italic;padding:1.5rem 0}
+@media(max-width:760px){.sor-footer{padding:1.2rem 1rem 2rem;gap:1.2rem}.sor-links{flex-wrap:wrap}}

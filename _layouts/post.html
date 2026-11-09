@@ -1,12 +1,20 @@
 ---
 layout: default
 ---
-<article class="inside-page article-page">
-  <p class="eyebrow">{{ page.location | default: 'FROM THE ROAD' }} · {{ page.date | date: '%d %B %Y' }}</p>
-  <h1 class="article-title">{{ page.title }}</h1>
-  {% if page.summary %}<p class="article-deck">{{ page.summary }}</p>{% endif %}
-  <div class="article-byline"><span>SOME ODD ROAD</span><span>{{ content | number_of_words }} WORDS</span></div>
-  {% if page.cover %}<figure class="article-cover"><img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title | escape }}">{% if page.caption %}<figcaption>{{ page.caption }}</figcaption>{% endif %}</figure>{% endif %}
-  <div class="article-body">{{ content }}</div>
-  <p class="back-to-archive"><a href="{{ '/stories/' | relative_url }}">← Back to all stories</a></p>
+{% if page.cover %}
+<section class="hero" id="dispatch">
+  <div class="hero-frame rv on"><img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title | escape }}"></div>
+  {% if page.caption %}<div class="hero-cap">{{ page.caption }}</div>{% endif %}
+</section>
+{% endif %}
+<article class="article">
+  <div class="measure">
+    <div class="eyebrow rv on">The Dispatch</div>
+    <h1 class="title rv on">{{ page.title }}</h1>
+    {% if page.summary %}<p class="standfirst rv on">{{ page.summary }}</p>{% endif %}
+    <div class="byline rv on"><span>Some Odd Road</span><span class="sep"></span><span>{{ page.location | default: 'Filed from the road' }}</span><span class="sep"></span><span>{{ content | number_of_words }} words</span></div>
+    <div class="prose journal-prose">{{ content }}</div>
+    <div class="end-stamp rv on"><span>End of dispatch</span><em>·</em><span>{{ content | number_of_words }} words</span><em>·</em><span>Filed by hand</span></div>
+    <nav class="sor-links" aria-label="Story navigation"><a href="{{ '/stories/' | relative_url }}">← The ledger</a><a href="{{ '/' | relative_url }}">Front page</a></nav>
+  </div>
 </article>

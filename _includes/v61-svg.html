@@ -1,0 +1,23 @@
+<!-- SVG FILTERS + DEFS -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+        <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+            <feturbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="4"></feturbulence>
+            <fedisplacementmap in="SourceGraphic" scale="2.2"></fedisplacementmap>
+        </filter>
+        <path id="arc-top" d="M 18 100 A 82 82 0 0 1 182 100"></path>
+        <path id="arc-bot" d="M 182 100 A 82 82 0 0 1 18 100"></path>
+        <!-- Minimal stamp (rings + road) for O-replacements and ledger cells -->
+        <symbol id="road-stamp-mini" viewBox="0 0 200 200">
+            <g class="ink-grp">
+                <circle class="ring ring-outer" cx="100" cy="100" r="90"></circle>
+                <circle class="ring ring-inner" cx="100" cy="100" r="78"></circle>
+                <path class="road-body" d="M 100,32 C 56,58 144,92 100,116 C 56,140 144,168 100,170"></path>
+            </g>
+            <path class="road-lane" d="M 100,32 C 56,58 144,92 100,116 C 56,140 144,168 100,170"></path>
+        </symbol>
+    </defs>
+</svg>
+
+<div class="grain"></div>
+<div class="fold"></div>
