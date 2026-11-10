@@ -1,20 +1,33 @@
 ---
 layout: default
 ---
-{% if page.cover %}
-<section class="hero" id="dispatch">
-  <div class="hero-frame rv on"><img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title | escape }}"></div>
-  {% if page.caption %}<div class="hero-cap">{{ page.caption }}</div>{% endif %}
-</section>
-{% endif %}
-<article class="article">
+<article class="sor-story">
+  {% assign country = page.country | default: page.location | default: 'From the road' | split: ',' | last | strip %}
+  <header class="sor-story-header">
+    <p class="sor-story-country">{{ country | escape }}</p>
+    <h1 class="sor-story-title">{{ page.title | escape }}</h1>
+    <p class="sor-story-author">By {{ page.author | default: site.author | default: 'Author' | escape }}</p>
+    <div class="sor-story-meta">
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%-d %B %Y' }}</time>
+      <span>{{ content | number_of_words }} words</span>
+    </div>
+  </header>
+
+  {% if page.cover %}
+  <figure class="sor-story-photo">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title | escape }}">
+    <img class="sor-pelican-stamp"
+      src="{{ '/assets/branding/pelican_stamp_red_overlay.png' | relative_url }}"
+      alt="" aria-hidden="true">
+    {% if page.caption %}<figcaption>{{ page.caption }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+
   <div class="measure">
-    <div class="eyebrow rv on">The Dispatch</div>
-    <h1 class="title rv on">{{ page.title }}</h1>
-    {% if page.summary %}<p class="standfirst rv on">{{ page.summary }}</p>{% endif %}
-    <div class="byline rv on"><span>Some Odd Road</span><span class="sep"></span><span>{{ page.location | default: 'Filed from the road' }}</span><span class="sep"></span><span>{{ content | number_of_words }} words</span></div>
-    <div class="prose journal-prose">{{ content }}</div>
-    <div class="end-stamp rv on"><span>End of dispatch</span><em>·</em><span>{{ content | number_of_words }} words</span><em>·</em><span>Filed by hand</span></div>
-    <nav class="sor-links" aria-label="Story navigation"><a href="{{ '/stories/' | relative_url }}">← The ledger</a><a href="{{ '/' | relative_url }}">Front page</a></nav>
+    <div class="prose journal-prose sor-story-body">{{ content }}</div>
+    <nav class="sor-links" aria-label="Story navigation">
+      <a href="{{ '/stories/' | relative_url }}">← All stories</a>
+      <a href="{{ '/' | relative_url }}">Front page</a>
+    </nav>
   </div>
 </article>
