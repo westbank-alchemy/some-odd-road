@@ -17,3 +17,35 @@
 .sor-notice{min-height:1rem;margin-top:.6rem;color:var(--bone);font-family:var(--stamp);font-size:.68rem}
 .sor-empty{font-family:var(--serif);text-align:center;color:var(--ash);font-style:italic;padding:1.5rem 0}
 @media(max-width:760px){.sor-footer{padding:1.2rem 1rem 2rem;gap:1.2rem}.sor-links{flex-wrap:wrap}}
+
+/* Custom road O */
+.mast-title .odd-stamp {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mast-title .road-o-image {
+  position: absolute;
+  display: block;
+  width: 241.5%;
+  height: auto;
+  max-width: none;
+  left: -30.8%;
+  top: -12.25%;
+  mix-blend-mode: multiply;
+}
+
+/* Refine road emblem size and alignment */
+.mast-title .odd-stamp {
+  width: 0.98em;
+  height: 0.98em;
+  top: -0.055em;
+}
+/* Sharper O comparison */
+.mast-title .road-o-image {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: none;
+}
