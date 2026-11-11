@@ -1,4 +1,5 @@
 ---
+dispatch_number: 1
 layout: post
 title: "Our First Test Story"
 location: "SOMEWHERE ON THE ROAD"
