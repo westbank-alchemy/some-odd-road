@@ -13,12 +13,25 @@
 <body>
   {% include v61-svg.html %}
   <main class="shell">
-    <nav class="sor-top-nav" aria-label="Main navigation">
+    <nav class="sor-top-nav{% if page.compact_header %} sor-top-nav-interior{% endif %}" aria-label="Main navigation">
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/stories/' | relative_url }}">Stories</a>
       <a href="{{ '/about/' | relative_url }}">About</a>
+      {% if page.compact_header %}
+      <a class="sor-compact-brand" href="{{ '/' | relative_url }}"
+         aria-label="Some Odd Road homepage">
+        <span>Some</span>
+        <span class="sor-compact-odd">
+          <img src="{{ '/assets/branding/design_SOR_sharp_O.png' | relative_url }}"
+               alt="">dd
+        </span>
+        <span>Road</span>
+      </a>
+      {% endif %}
     </nav>
-    {% include v61-masthead.html %}
+    {% unless page.compact_header %}
+      {% include v61-masthead.html %}
+    {% endunless %}
     {{ content }}
   </main>
   {% include v61-subscribe.html %}
