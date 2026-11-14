@@ -51,7 +51,7 @@
 }
 
 /* SOR story layout v1 */
-.sor-story{padding:.7rem 0 4rem}
+.sor-story{padding:.7rem 0 1.5rem}
 .sor-story-header{text-align:center}
 .sor-story-country{font-family:var(--stamp);font-size:1.05rem;letter-spacing:.28em;text-transform:uppercase;color:var(--blood);margin-bottom:.65rem}
 .sor-story-title{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1.13;margin:0 auto .5rem;max-width:840px}
@@ -63,7 +63,7 @@
 .sor-story-photo figcaption{font-family:var(--serif);font-style:italic;color:var(--ash);font-size:.94rem;line-height:1.5;margin-top:.5rem;border-bottom:1px solid var(--bone-dk);padding-bottom:.85rem}
 .sor-story-body > p:first-of-type{text-indent:0}
 .sor-story-body > p:first-of-type::first-letter{float:left;font-family:Georgia,serif;font-size:4.5rem;font-style:italic;line-height:.8;color:var(--blood);margin:.08em .09em 0 0}
-@media(max-width:600px){.sor-story{padding:.75rem 0 3rem}.sor-story-title{font-size:clamp(2rem,9vw,3rem)}.sor-story-meta{font-size:.63rem}.sor-story-body > p:first-of-type::first-letter{font-size:3.6rem}}
+@media(max-width:600px){.sor-story{padding:.75rem 0 1rem}.sor-story-title{font-size:clamp(2rem,9vw,3rem)}.sor-story-meta{font-size:.63rem}.sor-story-body > p:first-of-type::first-letter{font-size:3.6rem}}
 
 /* Balance masthead and article spacing */
 .shell:has(> .sor-story) > .masthead {
@@ -160,4 +160,122 @@
   .sor-story-photo > img.sor-pelican-stamp {
     width: 140px !important;
   }
+}
+
+
+/* Subtle ending line beneath every story */
+.sor-story-end-rule {
+  display: block;
+  width: 120px;
+  height: 0;
+  border: 0;
+  border-top: 1px solid var(--ink, #0b0a08);
+  opacity: 0.45;
+  margin: 2.75rem auto 2.25rem;
+}
+
+
+/* Main navigation ribbon */
+.sor-top-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  padding: 0.65rem 0 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.sor-top-nav a {
+  font-family: var(--stamp, monospace);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink, #0b0a08);
+  text-decoration: none;
+}
+
+.sor-top-nav a:hover,
+.sor-top-nav a:focus-visible {
+  color: var(--blood, #8e1c14);
+}
+
+@media (max-width: 600px) {
+  .sor-top-nav {
+    gap: 1.5rem;
+  }
+
+  .sor-top-nav a {
+    font-size: 0.65rem;
+  }
+}
+
+
+/* Navigation ribbon refinement */
+.sor-top-nav {
+  justify-content: flex-start;
+  gap: 2.5rem;
+}
+
+.sor-top-nav a {
+  font-size: 0.85rem;
+  color: var(--blood, #8e1c14);
+}
+
+@media (max-width: 600px) {
+  .sor-top-nav {
+    gap: 1.5rem;
+  }
+
+  .sor-top-nav a {
+    font-size: 0.78rem;
+  }
+}
+
+
+/* Final navigation ribbon spacing */
+.sor-top-nav {
+  padding-bottom: 0.65rem;
+  margin-bottom: -3.5rem;
+}
+
+.sor-top-nav a {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .sor-top-nav a {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* Enlarged story country label */
+.sor-story-country {
+  font-size: 1.32rem;
+}
+
+@media (max-width: 600px) {
+  .sor-story-country {
+    font-size: 1rem;
+  }
+}
+
+/* Keep navigation links clickable above masthead */
+.sor-top-nav {
+  position: relative;
+  z-index: 10;
+}
+
+/* Preserve lowercase see and capitalized Stories */
+.sor-ledger-v62 .sor-ledger-more {
+  text-transform: none !important;
+}
+
+/* Clear, regular-weight "see" */
+.sor-ledger-v62 .sor-ledger-see {
+  font-size: 1.25em;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--ink, #0b0a08);
 }

@@ -1,7 +1,7 @@
 <style>
 .sor-ledger-v62 {
   max-width: 980px;
-  margin: 2rem auto 5rem;
+  margin: 0.75rem auto 5rem;
   color: var(--ink, #0b0a08);
 }
 
@@ -130,15 +130,94 @@
     justify-self: start;
   }
 }
+
+/* Single-row Ledger heading */
+.sor-ledger-v62-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: 1rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+
+.sor-ledger-v62-labels {
+  display: contents;
+}
+
+.sor-ledger-v62-labels strong {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+}
+
+.sor-ledger-v62-labels .sor-ledger-more {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.sor-ledger-v62-head p {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .sor-ledger-v62-head {
+    grid-template-columns: 1fr auto;
+    row-gap: 0.75rem;
+  }
+
+  .sor-ledger-v62-labels .sor-ledger-more {
+    grid-column: 2;
+  }
+
+  .sor-ledger-v62-head p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+
+/* Ledger editorial heading colors */
+.sor-ledger-v62-labels strong {
+  color: var(--ink, #0b0a08);
+}
+
+.sor-ledger-v62-labels .sor-ledger-more {
+  color: var(--ink, #0b0a08);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.sor-ledger-v62-labels .sor-ledger-more b {
+  color: var(--blood, #8e1c14);
+}
+
+.sor-ledger-v62-labels .sor-ledger-more:hover b {
+  text-decoration: underline;
+}
+
+
+/* Improve readability of 'see' */
+.sor-ledger-see {
+  font-size: 1.15em;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--ink, #0b0a08);
+}
+
 </style>
 {% assign excluded_url = include.exclude_url | default: page.url %}
 <section class="sor-ledger-v62">
   <header class="sor-ledger-v62-head">
     <div class="sor-ledger-v62-labels">
       <strong>The Ledger</strong>
-      <span>Earlier Dispatches</span>
+      <a class="sor-ledger-more" href="{{ '/stories/' | relative_url }}"><span class="sor-ledger-see">see more</span> <b>Stories</b></a>
     </div>
-    <p>Unedited. Unranked. In the order they came off the road.</p>
+    <p>from elsewhere</p>
   </header>
 
   <div class="sor-ledger-v62-list">

@@ -13,6 +13,11 @@
 <body>
   {% include v61-svg.html %}
   <main class="shell">
+    <nav class="sor-top-nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/stories/' | relative_url }}">Stories</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+    </nav>
     {% include v61-masthead.html %}
     {{ content }}
   </main>

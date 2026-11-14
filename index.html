@@ -46,11 +46,6 @@ layout: default
     <div class="prose journal-prose sor-story-body">
       {{ featured.content | markdownify }}
     </div>
-
-    <nav class="sor-links" aria-label="Story navigation">
-      <a href="{{ featured.url | relative_url }}">Story permalink</a>
-      <a href="{{ '/stories/' | relative_url }}">All stories</a>
-    </nav>
   </div>
 </article>
 
