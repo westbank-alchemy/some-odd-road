@@ -88,12 +88,17 @@ compact_header: true
 }
 
 .sor-stories-meta {
-  font-family: var(--stamp, monospace);
-  font-size: .67rem;
+  font-family: Georgia, serif;
+  font-size: .64rem;
   letter-spacing: .045em;
   line-height: 1.6;
   text-transform: uppercase;
+  color: var(--ash, #625a50);
   margin-bottom: .4rem;
+}
+
+.sor-stories-number {
+  font-family: var(--stamp, monospace);
 }
 
 .sor-stories-number {
@@ -216,7 +221,7 @@ compact_header: true
 
           <div class="sor-stories-meta">
             <span class="sor-stories-number">
-              Nº {{ number | prepend: '000' | slice: -3, 3 }}
+              Nº {% assign story_no = number | plus: 0 %}{% if story_no < 100 %}{{ story_no | prepend: '0' | slice: -2, 2 }}{% else %}{{ story_no }}{% endif %}
             </span>
             · {{ post.country | default: post.location }}
             · {{ post.date | date: '%-d %B %Y' }}

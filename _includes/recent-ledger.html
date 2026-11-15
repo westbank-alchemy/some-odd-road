@@ -57,7 +57,7 @@
 }
 
 .sor-ledger-v62-meta {
-  font-family: var(--stamp, monospace);
+  font-family: Georgia, serif;
   font-size: .61rem;
   letter-spacing: .045em;
   text-transform: uppercase;
@@ -66,6 +66,7 @@
 }
 
 .sor-ledger-v62-number {
+  font-family: var(--stamp, monospace);
   color: var(--blood, #8e1c14);
   font-weight: bold;
 }
@@ -137,8 +138,8 @@
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   column-gap: 1rem;
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .sor-ledger-v62-labels {
@@ -158,10 +159,11 @@
 }
 
 .sor-ledger-v62-head p {
-  grid-column: 2;
+  grid-column: 1;
   grid-row: 1;
+  justify-self: start;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 @media (max-width: 720px) {
@@ -175,8 +177,8 @@
   }
 
   .sor-ledger-v62-head p {
-    grid-column: 1 / -1;
-    grid-row: 2;
+    grid-column: 1;
+    grid-row: 1;
   }
 }
 
@@ -209,12 +211,24 @@
   color: var(--ink, #0b0a08);
 }
 
+
+
+/* Spectral Medium test for THE LEDGER */
+.sor-ledger-v62-labels > strong {
+  font-family: 'Spectral', Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink, #0b0a08);
+}
+
 </style>
 {% assign excluded_url = include.exclude_url | default: page.url %}
 <section class="sor-ledger-v62">
   <header class="sor-ledger-v62-head">
     <div class="sor-ledger-v62-labels">
-      <strong>The Ledger</strong>
+      
       <a class="sor-ledger-more" href="{{ '/stories/' | relative_url }}"><span class="sor-ledger-see">see more</span> <b>Stories</b></a>
     </div>
     <p>from elsewhere</p>
@@ -244,7 +258,7 @@
         <div>
           <div class="sor-ledger-v62-meta">
             <span class="sor-ledger-v62-number">
-              Nº {% if post.dispatch_number %}{{ number | prepend: '000' | slice: -3, 3 }}{% else %}—{% endif %}
+              Nº {% if post.dispatch_number %}{% assign story_no = number | plus: 0 %}{% if story_no < 100 %}{{ story_no | prepend: '0' | slice: -2, 2 }}{% else %}{{ story_no }}{% endif %}{% else %}—{% endif %}
             </span>
             · {{ post.date | date: '%-d %B %Y' }}
             · {{ post.country | default: post.location | default: 'From the road' }}
