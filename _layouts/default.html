@@ -13,11 +13,16 @@
 <body>
   {% include v61-svg.html %}
   <main class="shell">
-    <nav class="sor-top-nav{% if page.compact_header %} sor-top-nav-interior{% endif %}" aria-label="Main navigation">
+    {% assign sor_compact_header = page.compact_header %}
+    {% if page.layout == 'post' or page.dispatch_number %}
+      {% assign sor_compact_header = true %}
+    {% endif %}
+    <nav class="sor-top-nav{% if sor_compact_header %} sor-top-nav-interior{% endif %}" aria-label="Main navigation">
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/stories/' | relative_url }}">Stories</a>
       <a href="{{ '/about/' | relative_url }}">About</a>
-      {% if page.compact_header %}
+      <a class="sor-nav-subscribe" href="#subscribe">Subscribe</a>
+      {% if sor_compact_header %}
       <a class="sor-compact-brand" href="{{ '/' | relative_url }}"
          aria-label="Some Odd Road homepage">
         <span>Some</span>
@@ -29,17 +34,13 @@
       </a>
       {% endif %}
     </nav>
-    {% unless page.compact_header %}
+    {% unless sor_compact_header %}
       {% include v61-masthead.html %}
     {% endunless %}
     {{ content }}
   </main>
   {% include v61-subscribe.html %}
-  <footer class="sor-footer" aria-label="Site navigation">
-    <a href="{{ '/' | relative_url }}">Front page</a>
-    <a href="{{ '/stories/' | relative_url }}">All stories</a>
-    <a href="{{ '/about/' | relative_url }}">About</a>
-  </footer>
+
   <script src="{{ '/assets/js/v61-site.js' | relative_url }}" defer></script>
 </body>
 </html>

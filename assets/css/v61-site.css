@@ -439,3 +439,75 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Top navigation Subscribe button */
+.sor-top-nav a.sor-nav-subscribe {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  background: var(--blood, #8e1c14);
+  border: 1px solid var(--blood, #8e1c14);
+  color: #EBE3D1;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.sor-top-nav a.sor-nav-subscribe:hover,
+.sor-top-nav a.sor-nav-subscribe:focus-visible {
+  background: var(--ink, #0b0a08);
+  border-color: var(--ink, #0b0a08);
+  color: #EBE3D1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Tighter desktop navigation spacing */
+@media (min-width: 601px) {
+  .sor-top-nav {
+    gap: 1.25rem;
+  }
+
+  .sor-top-nav.sor-top-nav-interior {
+    gap: 1.25rem;
+  }
+}
+
+/* Compact subscription section */
+.sub {
+  padding-top: 3.75rem;
+  padding-bottom: 3.25rem;
+}
+
+.sub-eyebrow {
+  margin-bottom: 1.2rem;
+}
+
+.sub h3 {
+  margin-bottom: 0.9rem;
+}
+
+.sub .pitch {
+  margin-bottom: 1.6rem;
+  line-height: 1.6;
+}
+
+.sub-fine {
+  margin-top: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .sub {
+    padding-top: 3rem;
+    padding-bottom: 2.75rem;
+  }
+}
+
+/* Wider desktop subscription headline */
+@media (min-width: 761px) {
+  .sub-inner {
+    max-width: 700px;
+  }
+}
