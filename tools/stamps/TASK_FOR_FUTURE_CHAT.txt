@@ -1,0 +1,9 @@
+TASK: Extend or reproduce Some Odd Road numbered pelican stamps using the attached SOR stamp production kit.
+
+1. Read STAMP_MASTER_SPEC.md, then inspect its exact source PNGs and generate_stamps.py. Treat the approved images as authoritative. No image generation. Do not redesign the pelican, the Bulgarian writing, the distressing, or the numeral shapes. C059 Bold numeral shapes are already stored in digit_0.png ... digit_9.png; do not render fonts or recreate distress.
+2. Recreate 01–99 with the unchanged two-digit geometry. Confirm generated 01 matches approved_numbered_01.png pixel-for-pixel and compare the output to the approved prior batch.
+3. IF REQUESTED TO EXTEND TO 100–200: do not touch 01–99. Use the kit's three-digit setting only as a first PROPOSAL, preview 100, 111, 188, 200 on cream and transparent; match the look and clearance at actual website size; discuss the shared three-digit geometry for approval before batch generation. All three digits must share the same baseline and rotate as a single +12° unit.
+4. For any batch, verify unique filenames, matching canvas size 1322x1190 RGBA, transparent background, preservation of outer seal pixels, and installation path assets/branding/pelican_stamp_NNN.png.
+5. Deliver a ZIP ready to extract at the root of westbank-alchemy/some-odd-road, plus readable preview sheets. Never silently replace or modify a previously approved asset.
+
+Required inputs: this production kit (PNG masters + script + spec). An old chat transcript alone is insufficient for pixel-exact reproduction. No font files need to be uploaded.
