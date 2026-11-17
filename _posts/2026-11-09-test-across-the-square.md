@@ -15,11 +15,23 @@ The square was almost empty when I first crossed it. A street sweeper pushed a c
 
 At one corner, a bookseller was arranging used volumes on a table. Their covers ranged from faded cloth to glossy photographs. He lined them up according to a system known only to himself, then moved several back when he noticed they weren't straight. A woman stopped to inspect a cookbook, flipped through a few pages, and returned it to the stack. They exchanged a few words. She left without buying anything, and the seller resumed his work as though the conversation had been an expected part of the morning's inventory.
 
+<figure class="sor-inline-photo sor-inline-photo--left">
+  <img src="{{ '/assets/images/bulgaria2.jpg' | relative_url }}"
+       alt="Stone church with a wooden bell tower in Bulgaria">
+  <figcaption>Church with a wooden bell tower, Bulgaria.</figcaption>
+</figure>
+
 The church doors were open, but a small sign inside discouraged photographs. I put away my phone and stepped into the cool interior. A woman at a desk sorted candles by size. Two visitors stood beneath a painted wall looking upward without speaking. The light was dim enough that the colors took time to separate from the shadows. I stayed near the back, watching people enter, make small gestures of respect, and leave. The room seemed less concerned with explaining itself to strangers than with maintaining a rhythm older than any particular visitor.
 
 Outside, the bells began to ring. Their sound crossed the square and echoed between façades in uneven waves. A group of schoolchildren hurried past their teacher, scattering pigeons that had been collecting crumbs beneath the benches. A cyclist slowed, waited for an opening, and continued between a bus stop and the corner of a flower bed. The square had become busy without ever becoming crowded. I moved to a café terrace where a waiter placed a menu on the table, then removed it when I ordered coffee before opening it.
 
 From the terrace I could see the church, an administrative building, and a cluster of storefronts selling things no traveler would normally photograph. One window displayed keys and locks. Another advertised phone repairs. A shop with a handwritten sign sold cleaning supplies. These were the unremarkable businesses that held the square together between ceremonies, demonstrations, and postcard visits. I wondered what a resident would choose as the square's defining feature. It might be the church, but it might just as easily be the pharmacy that stayed open late.
+
+<figure class="sor-inline-photo sor-inline-photo--right">
+  <img src="{{ '/assets/images/bulgaria3.JPG' | relative_url }}"
+       alt="Equestrian monument and historic buildings in Sofia, Bulgaria">
+  <figcaption>Monument to the Tsar Liberator, Sofia.</figcaption>
+</figure>
 
 The architectural history of a city is often presented as a sequence of clean replacements: one government falls, a monument is erected, a style gives way to the next. On the ground, the changes are untidier. A restored façade adjoins a patched storefront. A plaque explains a vanished building while a new advertisement covers part of the wall beside it. A tram passes a statue whose original audience could never have imagined the vehicle. The city does not replace one chapter with another. It stacks them, sometimes badly, and asks the inhabitants to make sense of the result.
 
