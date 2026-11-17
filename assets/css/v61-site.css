@@ -483,6 +483,7 @@
 
 .sub-eyebrow {
   margin-bottom: 1.2rem;
+  font-size: calc(0.7rem + 7px);
 }
 
 .sub h3 {
@@ -496,6 +497,7 @@
 
 .sub-fine {
   margin-top: 1.1rem;
+  font-size: calc(0.6rem + 4px);
 }
 
 @media (max-width: 600px) {
