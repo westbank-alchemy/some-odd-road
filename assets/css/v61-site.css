@@ -668,3 +668,42 @@
     font-size: 13px;
   }
 }
+
+/* Mobile interior header — centered Some Odd Road logo */
+@media (max-width: 600px) {
+
+  .sor-top-nav.sor-top-nav-interior {
+    row-gap: 1rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .sor-top-nav.sor-top-nav-interior .sor-compact-brand {
+    flex: 0 0 100%;
+    margin-left: 0;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.35rem;
+  }
+
+}
+
+/* Mobile About page — match story body typography */
+@media (max-width: 600px) {
+  .sor-about-copy {
+    font-size: calc(1.15rem - 3px);
+  }
+}
+
+/* Mobile About divider — visually match Stories */
+@media (max-width: 600px) {
+  .sor-about-accent {
+    height: 0.5px;
+  }
+}
+
+/* Mobile About page — spacing before Subscribe */
+@media (max-width: 600px) {
+  .sor-about-page {
+    margin-bottom: 3rem;
+  }
+}
