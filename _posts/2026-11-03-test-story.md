@@ -19,6 +19,11 @@ There are places where the landscape arrives before the settlement, announcing i
 
 We stopped beside a shop that sold batteries, biscuits, and a surprising variety of hair dye. Its owner had arranged the merchandise into careful columns, with candles beneath the register and packets of tea stacked beside a portable radio. The radio was quiet. She told our driver that the telephone signal had disappeared after last night's storm. He held up his own phone to confirm it, then put it away. I bought a chocolate bar I didn't want because it seemed impolite to stand there taking in the room without buying something.
 
+<figure class="sor-inline-photo sor-inline-photo--left">
+  <img src="{{ '/assets/images/georgia2.jpg' | relative_url }}" alt="Additional photograph from Georgia">
+  <figcaption>Georgia — caption pending.</figcaption>
+</figure>
+
 Beyond the shop stood a tower, narrow and severe, rising above the roofs as if it belonged to another system of measurement. Another appeared around the next bend. Their stone walls looked simultaneously permanent and vulnerable, the kind of buildings that could survive a century but not necessarily a badly planned road repair. I tried to imagine the valley before electric wires, trucks, and tourists carrying cameras. The exercise did not get very far. Every time I looked closely, the present asserted itself through a satellite dish or a bright plastic chair resting against ancient stone.
 
 At lunch we sat beneath a covered porch while the fog moved through the street. A dog slept under the neighboring table. Two men argued over something on a mobile phone, passed it between them, and finally turned the screen toward the waitress for a third opinion. She considered the matter for less than a second before waving them away. A plate of potatoes arrived with herbs scattered across the top. I had been thinking about the mountains, but the strongest impression of that hour was the warm bowl in my hands and the dog opening one eye whenever a chair scraped the floor.

@@ -21,6 +21,11 @@ At eight, a woman arrived with two children and a suitcase tied shut with a belt
 
 The bus appeared shortly after dark. It came around the corner slowly, its headlights rising and dipping over the uneven pavement. The driver stood in the open doorway while passengers crowded toward him. He checked each ticket with deliberate care, despite the wind and the line of people waiting. Our bags vanished into the compartment beneath the vehicle. The children climbed aboard first. I found a seat next to a window streaked with dust and discovered that its curtain was held in place with a knot.
 
+<figure class="sor-inline-photo sor-inline-photo--left">
+  <img src="{{ '/assets/images/argentina2.jpg' | relative_url }}" alt="Additional photograph from Argentina">
+  <figcaption>Argentina — caption pending.</figcaption>
+</figure>
+
 We left town past rows of orange streetlights. For a while there were workshops, fences, and signs advertising rooms. Then the last lit building disappeared and the darkness became absolute. The road was visible only where our headlights touched it. I could occasionally make out a wire fence or a white post marking a curve. The landscape that had seemed immense in daylight had become a narrow strip of asphalt and a black pane of glass that returned my own reflection whenever I tried to look outside.
 
 An hour later, the driver stopped beside a building with a single fluorescent light above its door. Nobody announced a break, but half the passengers stood up at once. Inside, the counter held a thermos, packaged biscuits, and a tray of empanadas that had been waiting longer than we had. A woman sold hot water for the thermoses passengers carried. I watched the small economy unfold: coins exchanged, paper cups filled, food offered across the counter, and everyone checking the bus every few minutes to make sure it was still there.

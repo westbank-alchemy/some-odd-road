@@ -17,11 +17,21 @@ A merchant unlocked his shutters opposite me. He did not raise them all at once.
 
 By seven, the lane smelled of bread, damp stone, and whatever had been spilled the night before. Delivery workers carried boxes past vegetable sellers arranging tomatoes into low pyramids. Every few minutes someone stopped to settle an argument about space. A wheel was in the way, a crate had been left too far out, or a shopkeeper wanted a delivery moved before customers arrived. Nobody seemed interested in escalating the dispute. The object was simply to open for business, and that required pushing the day's small conflicts aside until later.
 
+<figure class="sor-inline-photo sor-inline-photo--left">
+  <img src="{{ '/assets/images/morocco2.jpg' | relative_url }}" alt="Additional photograph from Morocco">
+  <figcaption>Morocco — caption pending.</figcaption>
+</figure>
+
 I entered a covered passage where the light changed color. Yellow bulbs hung above stalls, their cords crossing older wires that followed the ceiling in loose curves. A tailor had already begun work at a sewing machine. The rapid metal tapping echoed between the walls. Next door, a shop sold little brass objects whose purposes I couldn't confidently identify. I imagined several extravagant uses for them before seeing a customer pick one up, examine its underside, and place it back on the shelf without comment. The market made an industry out of my uncertainty.
 
 My own purchase was a small packet of dates. The seller offered me a taste, opened the packet, then insisted I choose a different one. I couldn't tell whether he was improving my selection or moving older stock. We negotiated a price mostly by pointing at coins. He counted the change into my palm and returned to arranging the boxes before I had stepped aside. The exchange lasted less than a minute, yet it contained more practical instruction about the market than anything I had read about its history.
 
 At a tiny intersection, the traffic stopped altogether. A delivery cart faced a motorbike, a hand truck waited behind them, and a woman carrying bread stood between the two possible exits. For several seconds nobody moved. Then the motorbike reversed, the woman passed, and the cart squeezed through the available space with a single triumphant squeak. There was no applause, only a resumption of the previous noise. A young worker looked at me grinning and lifted his hands in a gesture that seemed to say: You see? This is how things work.
+
+<figure class="sor-inline-photo sor-inline-photo--right">
+  <img src="{{ '/assets/images/morocco3.jpg' | relative_url }}" alt="Additional photograph from Morocco">
+  <figcaption>Morocco — caption pending.</figcaption>
+</figure>
 
 Visitors often search for an old city preserved apart from modern life. But the most revealing objects in the market were modern ones: a cracked phone used to compare prices, a plastic scale on a wooden counter, a battery-powered light wired above a stall. The merchants sold things whose designs had changed with every generation, even as their shops occupied familiar spaces. The value of the market did not seem to lie in stopping time. It lay in making room for new habits without requiring the whole place to be rebuilt around them.
 
