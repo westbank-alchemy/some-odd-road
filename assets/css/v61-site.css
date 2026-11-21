@@ -611,3 +611,60 @@
 .sor-story-body.prose .sor-inline-photo + p {
   text-indent: 1.6em;
 }
+
+/* Mobile navigation: prevent line overlapping Subscribe button */
+@media (max-width: 600px) {
+  .sor-top-nav:not(.sor-top-nav-interior) {
+    margin-bottom: -2.75rem;
+  }
+}
+
+/* Mobile-only story body font adjustment */
+@media (max-width: 600px) {
+  .sor-story-body.prose.journal-prose p {
+    font-size: calc(1.15rem - 3px);
+  }
+}
+
+/* Mobile-only masthead tagline */
+@media (max-width: 600px) {
+  .masthead .mast-sub {
+    font-size: 0.84375rem;
+    white-space: nowrap;
+  }
+}
+
+/* Mobile Subscribe heading adjustments */
+@media (max-width: 600px) {
+  .sub-eyebrow {
+    font-size: 15.5px;
+    letter-spacing: 3px;
+    gap: 0.65rem;
+    white-space: nowrap;
+  }
+
+  .sub-eyebrow::before,
+  .sub-eyebrow::after {
+    width: 18px;
+    flex-shrink: 0;
+  }
+
+  .sub h3 {
+    font-size: 27px;
+    white-space: nowrap;
+  }
+}
+
+/* Mobile-only Subscribe fine print */
+@media (max-width: 600px) {
+  .sub-fine {
+    font-size: 12.5px;
+  }
+}
+
+/* Mobile-only Subscribe button text */
+@media (max-width: 600px) {
+  .sub .sub-form button {
+    font-size: 13px;
+  }
+}

@@ -115,19 +115,30 @@
   .sor-ledger-v62 {
     margin-top: 1rem;
   }
+
+.sor-ledger-v62-thumb {
+  width: 70%;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
   .sor-ledger-v62-row {
-    grid-template-columns: 100px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
     align-items: start;
   }
+
   .sor-ledger-v62-title {
     font-size: 1.2rem;
   }
+
   .sor-ledger-v62-meta {
     font-size: .55rem;
   }
+
   .sor-ledger-v62-read {
-    grid-column: 2;
+    grid-column: 1;
     justify-self: start;
   }
 }
@@ -221,6 +232,66 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ink, #0b0a08);
+}
+
+/* Compact editorial story cards — mobile only */
+@media (max-width: 650px) {
+  .sor-ledger-v62-row {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    grid-template-areas:
+      "meta meta"
+      "title title"
+      "photo excerpt"
+      "photo read";
+    column-gap: 14px;
+    row-gap: 0.5rem;
+    align-items: start;
+  }
+
+.sor-ledger-v62-row .sor-ledger-v62-excerpt {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  min-height: calc(3 * 0.92rem * 1.48);
+}
+
+  .sor-ledger-v62-row > div {
+    display: contents;
+  }
+
+  .sor-ledger-v62-row > a:first-child {
+    grid-area: photo;
+    display: block;
+  }
+
+  .sor-ledger-v62-row .sor-ledger-v62-thumb,
+  .sor-ledger-v62-row .sor-ledger-v62-placeholder {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .sor-ledger-v62-row .sor-ledger-v62-meta {
+    grid-area: meta;
+  }
+
+  .sor-ledger-v62-row .sor-ledger-v62-title {
+    grid-area: title;
+    margin: 0;
+  }
+
+  .sor-ledger-v62-row .sor-ledger-v62-excerpt {
+    grid-area: excerpt;
+  }
+
+  .sor-ledger-v62-row .sor-ledger-v62-read {
+    grid-area: read;
+    grid-column: auto;
+    justify-self: start;
+    align-self: start;
+  }
 }
 
 </style>
