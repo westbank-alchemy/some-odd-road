@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
   <meta name="theme-color" content="#EBE3D1">
-  {% if page.url == '/' %}
+  <link rel="preload"
+      href="https://fonts.gstatic.com/s/spectral/v15/rnCs-xNNww_2s0amA9vmtm3BafY.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin>
 <link rel="preload" as="image"
       href="{{ '/assets/branding/SOR_red_road_CENTERLINE_18pct_TEST.png' | relative_url }}"
       fetchpriority="high">
-{% endif %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@1,400&amp;display=swap">
 <title>{% if page.url == '/' %}Home — {{ site.title | escape }}{% elsif page.title %}{{ page.title | escape }} — {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <link rel="stylesheet" href="{{ '/assets/css/v61-fonts.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/v61-original.css' | relative_url }}">
@@ -30,12 +34,13 @@
       {% if sor_compact_header %}
       <a class="sor-compact-brand" href="{{ '/' | relative_url }}"
          aria-label="Some Odd Road homepage">
-        <span>Some</span>
-        <span class="sor-compact-odd">
-          <img src="{{ '/assets/branding/design_SOR_sharp_O.png' | relative_url }}"
-               alt="">dd
-        </span>
-        <span>Road</span>
+<span>Some</span>
+<span class="sor-compact-odd">
+  <span class="odd-type-o">O<img class="odd-road-overlay"
+    src="{{ '/assets/branding/SOR_red_road_CENTERLINE_18pct_TEST.png' | relative_url }}"
+    alt=""></span>dd
+</span>
+<span>Road</span>
       </a>
       {% endif %}
     </nav>

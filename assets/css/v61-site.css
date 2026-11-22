@@ -62,7 +62,7 @@
 .sor-story-photo img{width:100%;max-height:550px;object-fit:cover;filter:none}
 .sor-story-photo figcaption{font-family:var(--serif);font-style:italic;color:var(--ash);font-size:.94rem;line-height:1.5;margin-top:.5rem;border-bottom:1px solid var(--bone-dk);padding-bottom:.85rem}
 .sor-story-body > p:first-of-type{text-indent:0}
-.sor-story-body > p:first-of-type::first-letter{float:left;font-family:Georgia,serif;font-size:4.5rem;font-style:italic;line-height:.8;color:var(--blood);margin:.08em .09em 0 0}
+.sor-story-body > p:first-of-type::first-letter{float:left;font-family:'Gentium Book Plus',Georgia,serif;font-size:3rem;font-style:italic;line-height:.8;color:var(--blood);margin:-.12em .03em 0 0}
 @media(max-width:600px){.sor-story{padding:.75rem 0 1rem}.sor-story-title{font-size:clamp(2rem,9vw,3rem)}.sor-story-meta{font-size:.63rem}.sor-story-body > p:first-of-type::first-letter{font-size:3.6rem}}
 
 /* Balance masthead and article spacing */
@@ -736,4 +736,36 @@
   transform: translate(-50%, -50%);
   pointer-events: none;
     z-index: -1;
+}
+
+/* Desktop opening initial — match paragraph indentation */
+@media (min-width: 601px) {
+  .sor-story-body > p:first-of-type::first-letter {
+    margin-left: 0.65em;
+  }
+}
+
+/* Compact masthead — typographic O with red road */
+.sor-compact-odd .odd-type-o {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.sor-compact-odd .odd-road-overlay {
+  position: absolute;
+  width: 47%;
+  height: auto;
+  max-width: none;
+  left: 50%;
+  top: calc(50% - 1px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Enlarge the entire compact masthead */
+.sor-compact-brand {
+  transform: scale(1.12);
+  transform-origin: right center;
 }
