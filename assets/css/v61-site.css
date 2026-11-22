@@ -707,3 +707,33 @@
     margin-bottom: 3rem;
   }
 }
+
+/* Masthead O — display complete immediately */
+.mast-title .odd-stamp .road-body {
+  animation: none;
+  stroke-dashoffset: 0;
+}
+
+.mast-title .odd-stamp .road-lane {
+  animation: none;
+  opacity: 1;
+}
+
+/* Typographic O with red road overlay — test */
+.mast-title .odd-type-o {
+  position: relative;
+  display: inline-block;
+    isolation: isolate;
+}
+
+.mast-title .odd-road-overlay {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  max-width: none;
+  left: 50%;
+  top: calc(50% - 5px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+    z-index: -1;
+}

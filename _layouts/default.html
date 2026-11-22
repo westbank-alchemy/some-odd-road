@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
   <meta name="theme-color" content="#EBE3D1">
+  {% if page.url == '/' %}
+<link rel="preload" as="image"
+      href="{{ '/assets/branding/SOR_red_road_CENTERLINE_18pct_TEST.png' | relative_url }}"
+      fetchpriority="high">
+{% endif %}
 <title>{% if page.url == '/' %}Home — {{ site.title | escape }}{% elsif page.title %}{{ page.title | escape }} — {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <link rel="stylesheet" href="{{ '/assets/css/v61-fonts.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/v61-original.css' | relative_url }}">
