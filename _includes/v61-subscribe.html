@@ -1,13 +1,141 @@
+
 <!-- SUBSCRIBE -->
 <section class="sub" id="subscribe">
     <div class="sub-inner">
         <div class="sub-eyebrow">The Standing Order</div>
         <h3>One sketch. Every other week.</h3>
-        <form class="sub-form" onsubmit="event.preventDefault()">
-            <input type="email" id="sub-email" placeholder="your@email.com" required="">
-            <button type="submit" id="sub-btn">Subscribe</button>
-        </form>
-        <div id="sor-signup-message" class="sor-notice" aria-live="polite"></div>
-        <div class="sub-fine">Unsubscribe at any dive bar with cell signal.</div>
+
+        <!-- Supascribe subscription form -->
+        <div data-supascribe-embed-id="568571273335"
+             data-supascribe-subscribe></div>
+
+        <div class="sub-fine">
+            Unsubscribe at any dive bar with cell signal.
+        </div>
     </div>
 </section>
+
+<!-- Supascribe Script -->
+<script src="https://js.supascribe.com/v1/loader/w7xkVhaTAig8XD7kgtFUAVqymzd2.js" async></script>
+
+<style>
+/* ============================================
+   SOME ODD ROAD — SUBSCRIPTION FORM
+   Supascribe styling overrides
+   ============================================ */
+
+/* Form containers */
+.sub .custom-substack-widget,
+.sub .custom-substack-widget .csw-container {
+    width: 100% !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    clip-path: none !important;
+}
+
+.sub .custom-substack-widget .csw-container,
+.sub .custom-substack-widget .csw-container > div {
+    gap: 0 !important;
+}
+
+.sub .custom-substack-widget .csw-container > div {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    clip-path: none !important;
+}
+
+.sub .custom-substack-widget form {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Email input */
+.sub .custom-substack-widget input {
+    flex: 1 !important;
+    min-width: 0;
+    height: 52px !important;
+    margin: 0 !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+
+    background: transparent !important;
+    color: var(--bone) !important;
+
+    font-family: var(--stamp) !important;
+    font-size: .78rem !important;
+    letter-spacing: 1px !important;
+    line-height: normal !important;
+
+    border: 1px solid rgba(235,227,209,.22) !important;
+    border-right: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+
+    -webkit-appearance: none !important;
+    appearance: none !important;
+
+    transition: border-color .3s !important;
+}
+
+/* Placeholder */
+.sub .custom-substack-widget input::placeholder {
+    color: rgba(235,227,209,.35) !important;
+    opacity: 1 !important;
+    letter-spacing: .6px !important;
+}
+
+/* Red focus border */
+.sub .custom-substack-widget input:focus {
+    border-color: var(--blood) !important;
+}
+
+/* Subscribe button */
+.sub .custom-substack-widget button {
+    flex: 0 0 130px !important;
+    width: 130px !important;
+    height: 52px !important;
+    margin: 0 !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+
+    background: #8E1C14 !important;
+    color: var(--bone) !important;
+
+    font-family: var(--stamp) !important;
+    font-size: .68rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+    line-height: normal !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+
+    transition: background-color .3s ease,
+                flex-basis .3s ease,
+                width .3s ease !important;
+}
+
+/* Original hover animation */
+.sub .custom-substack-widget button:hover {
+    background: var(--blood-dk) !important;
+    flex-basis: 144px !important;
+    width: 144px !important;
+}
+
+</style>
