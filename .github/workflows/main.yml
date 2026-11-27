@@ -33,10 +33,10 @@ jobs:
         run: |
           if [ -f Gemfile ]; then
             bundle install
-            bundle exec jekyll build --baseurl "/some-odd-road"
+            bundle exec jekyll build
           else
             gem install jekyll -v 4.4.1 --no-document
-            jekyll build --baseurl "/some-odd-road"
+            jekyll build
           fi
 
       - name: Configure GitHub Pages
