@@ -769,3 +769,16 @@
   transform: scale(1.12);
   transform-origin: right center;
 }
+
+
+/* Reduce visible font changes during initial loading */
+.mast-title,
+.sor-top-nav > a {
+    font-size-adjust: cap-height from-font;
+}
+
+.mast-sub,
+.sor-story-title,
+.sor-story-author {
+    font-size-adjust: from-font;
+}
